@@ -1,0 +1,83 @@
+
+/*General formatting is specified in the styles.css file which is referenced in the head of the why.html file*/
+
+/*Section 1 format: Why Us*/
+.why .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap:  35px;
+    padding: 90px 100px 0 100px;
+}
+
+.why .title {
+    border-bottom-color: #E6E6E6;
+    border-bottom-width: 2.3px;
+    border-bottom-style: solid;
+    padding-bottom: 20px;
+}
+
+.why .paragraph {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    line-height: 2;
+}
+
+/*Section 3 format: Awards*/
+.awards .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 100px 30px 100px;
+    row-gap: 50px;
+}
+
+.awards .container .title {
+    border-bottom-color: darkred;
+    border-bottom-width: thin;
+    border-bottom-style: solid;
+    padding-bottom: 20px;
+}
+
+.awards .text {
+    line-height: 2;
+}
+
+.awards .text b {
+    font-weight: 550;
+}
+
+.awards .images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 15px;
+}
+
+.awards img {
+    width: 610px;
+    height: auto;
+}
+
+/*For display on screens smaller with a width smaller than an iPad held in portrait, items must be rearranged*/
+/*Padding size and font sizes were the common changes made below*/
+/*The styles.css is referenced for changes in the header and footer*/
+@media screen and (max-width: 1024px) {
+    .why .container {
+        padding: 80px 40px 10px 40px;
+    }
+    .awards .container {
+        padding: 0 40px 10px 40px;
+    }
+    .awards .images {
+        flex-direction: column;
+        row-gap: 30px;
+        align-items: center;
+    }
+    .awards img {
+        width: 100%;
+        height: auto;
+    }
+}
+

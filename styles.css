@@ -1,0 +1,545 @@
+/*
+ styles.css
+ Contains main styling for the website.
+ Author: Keelin Saranchuk
+ Last updated: 2025-06-26
+*/
+
+/*Imported fonts, backup fonts are used when these are called below*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
+
+/*The formatting below is consistent across all pages and the styles.css page is referenced in index.html, why.html and products.html*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    /*font-size: 20px;*/
+    font-size:1.24rem;
+    font-weight: 300;
+    background-color: white;
+}
+
+h1 {
+    font-family: 'Newsreader', sans-serif;
+    /*font-size: 40px;*/
+    font-size: 2.5rem;
+    font-weight: 380;
+    color: black;
+}
+
+h2 {
+    font-family: 'Newsreader', sans-serif;
+    /*font-size: 36px;*/
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: darkred;
+}
+
+h3 {
+    font-family: 'Newsreader', 'Times New Roman', serif;
+    /*font-size: 32px;*/
+    font-size: 2.05rem;
+    font-weight: 400;
+    color: white;
+}
+
+h3 a{
+    text-decoration: none;
+    color: white;
+}
+
+
+/*Header format*/
+nav {
+    background-color: darkred;
+    color: white;
+}
+
+nav .header {
+    padding: 13px 100px;
+    display: flex;
+    position: sticky;
+    align-items: center;
+    justify-content: space-between;
+    /*top: 0;*/
+}
+
+/*These links are displayed in grid layout because otherwise elements would shift if they were bolded on mouse hover*/
+nav ul {
+    display: grid;
+    grid-auto-flow: column;
+    list-style: none;
+    gap: 80px;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    text-align: center;
+    min-width: 105px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    /*font-size: 16px;*/
+    font-size: 1.05rem;
+    font-weight: 220;
+    display: block;
+    transition: font-weight 0.2s ease;
+    width: 100%;
+}
+
+/*These links are bolded when the user hovers over them or clicks on them*/
+nav li a:hover,
+nav li a:active {
+    font-weight: 450;
+    color: white;
+}
+
+nav img {
+    width: 80px;
+    height: auto;
+    padding: 0;
+}
+
+nav .brand {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+
+/*Section 1 format: About Us*/
+.about .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap:  90px;
+    padding: 70px 100px;
+}
+
+.about .container .title {
+    border-bottom-color: #E6E6E6;
+    border-bottom-width: 2.3px;
+    border-bottom-style: solid;
+}
+
+.about .container .body {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    row-gap: 20px;
+}
+
+.about .container .text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    line-height: 2;
+}
+
+.about .container img {
+    width: 450px;
+    height: auto;
+    padding-top: 90px;
+}
+
+
+/*Section 2 format: Organic Farming Information*/
+.quote {
+    background-color: #FFCF94;
+    margin: 30px 0;
+}
+
+.quote .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 130px;
+    row-gap: 45px;
+}
+
+.quote .container h1 {
+    text-align: center;
+    line-height: 1.2;
+}
+
+.quote .container .button {
+    background-color: darkred;
+    border: none;
+    border-radius: 10px;
+
+    color: white;
+    font-weight: 440;
+    padding: 20px 35px;
+
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*Section 3 format: Retail Partner Testimonials*/
+/*Note: the 'partners' formatting is rereferenced in the why.html page*/
+.partners .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 100px 30px 100px;
+    row-gap: 60px;
+}
+
+.partners .container .text {
+    border-bottom-color: darkred;
+    border-bottom-width: thin;
+    border-bottom-style: solid;
+    padding-bottom: 20px;
+}
+
+.partners .container .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap:  90px;
+    line-height: 2;
+}
+
+.partners .container .item img {
+    max-width: 190px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/*Section 4 format: More Product Information*/
+.products .container {
+    display: flex;
+    flex-direction: row;
+    margin: 90px 100px 50px 100px;
+    background-color: #FFCF94;
+    height: 780px;
+    overflow: hidden;
+}
+
+.products .container img {
+    /*max-height: 780px;
+    height: 100%;
+    width: auto;*/
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+}
+
+.products .container video {
+    height: 100%;
+    width: auto;
+}
+
+.products .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 35px;
+    line-height: 1.6;
+    padding: 60px 60px;
+}
+
+.products .header {
+    border-bottom-color: darkred;
+    border-bottom-width: thin;
+    border-bottom-style: solid;
+    padding: 10px 60px;
+}
+
+.products .button {
+    background-color: darkred;
+    border: none;
+    border-radius: 10px;
+
+    margin-top: 15px;
+    color: white;
+    font-weight: 440;
+    padding: 15px 47px;
+
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*Section 5: Executive Team*/
+.executive .header {
+    border-bottom-color: darkred;
+    border-bottom-width: thin;
+    border-bottom-style: solid;
+    margin: 140px 100px 0 100px;
+    padding-bottom: 25px;
+}
+
+.executive .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 2;
+}
+
+.executive .container .text {
+    padding: 60px 30px 0 100px;
+}
+
+.executive .container img {
+    padding-right: 100px;
+    max-height: 450px;
+    width: auto;
+    object-fit: contain;
+}
+
+.executive .text b{
+    font-weight: 550;
+}
+
+/*This code was commented out because it was used for a previous design, in which the phone numbers of all board of directors members were included*/
+/*.executive .container img {
+    max-height: 450px;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+.executive .person :first-child{
+    font-weight: 550;
+}
+
+.executive .names {
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    line-height: 1.3;
+}*/
+
+/*Footer format*/
+.footer {
+    background-color: darkred;
+    color: white;
+    margin-top: 100px;
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 70px 100px;
+}
+
+.footer .brand {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.footer .brand img {
+    width: 80px;
+    height: auto;
+}
+
+.footer .container .text {
+    display: flex;
+    flex-direction: row;
+    column-gap: 90px;
+}
+
+.footer .item {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px
+}
+
+.footer .item p:first-child {
+    font-weight: 550;
+    font-size: 24px;
+    padding-bottom: 20px;;
+}
+
+.footer .item:last-child {
+    text-align: right;
+}
+
+.footer .text a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+}
+
+.footer .text a:hover,
+.footer .text a:active {
+    /*text-decoration-line: underline;*/
+    font-weight: 450;
+    color: #FFCF94;
+}
+
+/*For display on screens smaller with a width smaller than an iPad held in portrait, items must be rearranged*/
+/*Padding size and font sizes were the common changes made below*/
+@media screen and (max-width: 1024px) {
+    nav .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px 50px 20px;
+    }
+    nav {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    /*Links will appear in a drop-down menu instead of horizontally across the top of the page*/
+    nav ul {
+        flex-direction: column;
+        grid-auto-flow: row;
+        gap: 10px;
+        padding-top: 25px;
+        width: 100vw;
+        box-sizing: border-box;
+    }
+
+    /*Logo must now be smaller*/
+    nav img {
+        width: 50px;
+        height: auto;
+        padding: 0;
+    }
+
+    nav .brand {
+        column-gap: 10px;
+    }
+
+    /*Changing flex-direction, image will be displayed bellow the text*/
+    .about .container {
+        flex-direction: column;
+        padding: 40px 40px 10px 40px;
+        align-items: center;
+    }
+
+    .about .container img {
+        width: 100%;
+        max-width: 350px;
+        padding-top: 30px;
+    }
+
+    .quote .container {
+        padding: 60px 40px;
+        text-align: center;
+    }
+
+    .partners .container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        padding: 60px 40px 60px 40px;
+    }
+
+    .partners .container .item {
+        padding-bottom: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .partners .container .item img {
+        max-height: 230px;
+        padding: 20px;
+    }
+
+    .products .container {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 30px 0 30px;
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    .products .container video {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .products .container .text {
+        padding: 40px 20px 0 20px;
+        line-height: 2;
+    }
+
+    .products .button {
+        margin-top: 0;
+    }
+
+    .executive .container {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .executive .container .text {
+        line-height: 2;
+        padding: 40px 30px 0 40px;
+        text-align: left;
+    }
+
+    .executive .container img {
+        padding-right: 0;
+        max-height: 350px;
+        width: auto;
+    }
+
+    .executive .header {
+        margin: 100px 40px 0 40px;
+        padding-bottom: 25px;
+    }
+
+    .footer .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    /*The text displaying the address and links to other storefronts is not shown on mobile*/
+    .footer .container .text {
+        display: none;
+    }
+
+    .footer {
+        background-color: darkred;
+        color: white;
+        margin-top: 30px;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.5em;
+    }
+
+    body {
+        font-size: 16px;
+    }
+    body {
+        font-size: 1.1rem;
+    }
+
+    h1 {
+        font-size: 2.1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+}

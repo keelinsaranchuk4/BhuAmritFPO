@@ -1,0 +1,128 @@
+
+/*General formatting is specified in the styles.css file which is referenced in the head of the products.html file*/
+
+/*Section 1 format: How to Buy*/
+.buy .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap:  35px;
+    padding: 100px 100px 0 100px;
+}
+
+.title {
+    border-bottom-color: #E6E6E6;
+    border-bottom-width: 2.3px;
+    border-bottom-style: solid;
+    padding-bottom: 20px;
+}
+
+.buy .paragraph {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    line-height: 2;
+}
+
+/*Section 2 format: Product Information*/
+.products {
+    padding: 80px 100px 0 100px;
+}
+
+.grid-container {
+    display: grid;
+    justify-items: stretch;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 60px 0 10px 0;
+    background-color: white;
+    /*More columns or rows can be added if the format should be changed, or if any products need to be added*/
+    grid-template-rows: repeat(3, 530px);
+    grid-template-columns: repeat(3, 395px);
+}
+
+/*Display of each item, the container is a box with rounded corners*/
+.grid-item {
+    display: flex;
+    overflow: hidden;
+    padding: 0;
+
+    flex-direction: column;
+    background-color: #FAFAF5;
+    border: 2px solid #E6E6E6;
+    border-radius: 25px;
+}
+
+/*This specifies the format for the text contained within each grid item*/
+.grid-item .content {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+    gap: 10px;
+    text-align: left;
+    font-size: 1.5rem;
+    padding: 25px;
+}
+
+.grid-item img {
+    height: 310px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/*Additional format*/
+h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+}
+
+h5 {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: darkred;
+}
+
+h6 {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #6D6D6D;
+}
+
+/*For display on screens smaller with a width smaller than an iPad held in portrait, items must be rearranged*/
+/*Padding size and font sizes were the common changes made below*/
+/*The styles.css is referenced for changes in the header and footer*/
+@media screen and (max-width: 1024px) {
+    .buy .container {
+        padding: 80px 40px 10px 40px;
+    }
+    .products {
+        padding: 80px 40px 40px 40px;
+    }
+    .grid-container {
+        grid-template-rows: repeat(9, 530px);
+        grid-template-columns: repeat(1, 395px);
+        justify-content: center;
+    }
+}
+
+/*For smaller screens, like small phones, the width of the product boxes must be smaller*/
+@media screen and (max-width: 458px) {
+    .grid-container {
+        grid-template-rows: repeat(9, 530px);
+        grid-template-columns: repeat(1, 300px);
+        justify-content: center;
+    }
+
+    h4, h5 {
+        font-size: 1.1rem;
+    }
+
+    h6 {
+       font-size: 0.9rem;
+    }
+}

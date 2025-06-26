@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="Keelin Saranchuk, ksaranchuk4@gmail.com">
+    <meta charset="UTF-8">
+    <title>Bhu Amrit Farming Producer Company</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="javascript.js"></script>
+</head>
+<!--
+  index.html
+  Main landing page of the website.
+  Author: Keelin Saranchuk
+  Last updated: 2025-06-26
+-->
+<body>
+    <!--Header with navigation features, to allow for switching between pages-->
+    <nav>
+        <div class="header">
+            <div class="brand">
+                <img src="./images/logo.png" alt="Company logo">
+                <h3>
+                    <a href="index.html">BhuAmrit</a>
+                </h3>
+            </div>
+            <ul>
+                <li class="link" data-text="Home">
+                    <a href="index.html">About Us</a>
+                </li>
+                <li class="link" data-text="Why Shop With Us?">
+                    <a href="pages/why.html">Why Us?</a>
+                </li>
+                <li class="link" data-text="Product Information">
+                    <a href="pages/products.html">Our Products</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--Section 1: About Us-->
+    <section class="about">
+        <div class="container">
+            <div class="text">
+                <div class="title">
+                    <h1>About Us</h1>
+                </div>
+                <div class="body">
+                    <p>Established in 2018 in Roorkee, Uttarakhand, Bhuamrit is a farmer producer company registered under the Company Act 2013 holding more than 500 farmers in our organization.The farmers belong to the Bhagwanpur area, which is situated at Khubaanpur, Uttarakhand and know to supplying organic products to retail markets. Derived from two words, Bhumi means organic and Amrit means good quality. While growing our produce, we do not use any chemicals or pesticides on our plants and other products and adhere to environmental standards at all times.</p>
+                    <p>Our aim is to provide chemical-free food and to build a healthy nation by offering good nutrition and promoting a sustainable environment. By working together, we support each other and bridge the gap between farmers and the market. We have a wide range of products and are continuously adding more to our list.</p>
+                    <p>While we follow agricultural practices passed down from our ancestors, we also incorporate the latest agricultural technologies to maximize productivity from the land.</p>
+                </div>
+            </div>
+            <div class="image">
+                <img src="./images/about.png" alt="Woman Holding Product">
+            </div>
+        </div>
+    </section>
+    <!--Section 2: Organic Farming Information-->
+    <!--This section links to the why.html page, with more information on the importance of organic farming-->
+    <section class = "quote">
+        <div class="container">
+            <h1>Organic farming avoids the use of synthetic fertilizers, pesticides, growth regulators, and chemically treated livestock feed. Our products are always <em>organic</em>, <em>hygienic</em>, and <em>quality assured</em>.</h1>
+            <a href="pages/why.html" class="button">Why Shop With Us?</a>
+        </div>
+    </section>
+
+    <!--Section 3: Retail Partner Testimonials-->
+    <section class = "partners">
+        <div class="container">
+            <div class="text">
+                <h2>RETAIL PARTNER TESTIMONIALS</h2>
+            </div>
+            <div class="item">
+                <img src="./images/bauhinia.png" alt="Bauhinia">
+                <p>We have been regular customers of Bhuamrit for the past 1.5 years procuring mustard oil, cane sugar, jaggery powder, and honey. All their products are wonderful, and our own customers love incorporating these products into their daily routines. The products are nicely packed, with the honey sustainably packed in a glass bottle. <br> <br> <em>- Bauhinia Quintessence (Gujarat)</em></p>
+            </div>
+            <div class="item">
+                <img src="./images/ecociate.png" alt="Ecociate">
+                <p>We were fortunate to visit the fields and meet the dedicated organic farmers behind the organization, as well as see their processing methods firsthand. We’ve been supplying their products to our customers for the past year and have received excellent feedback. <br> <br> <em>- Ecociate (Noida, Uttar Pradesh)</em></p>
+            </div>
+            <div class="item">
+                <img src="images/shivshakti.png" alt="Shiv Shakti">
+                <p>All their packaging meets market standards, and we have consistently received good stock from the team. It has been a wonderful experience working with the organization.  <br> <br> <em>- Shiv Shakti Enterprises (Punjab)</em></p>
+            </div>
+        </div>
+    </section>
+    <!--Section 4: More Product Information-->
+    <!--This section contains a video showcasing the products, with a link to the product page-->
+    <!--Note this video could be replaced with a simpler image if preferred-->
+    <section class = "products">
+        <div class="container">
+            <!--<div class="image">
+                <img src="./images/cover.png" alt="Honey">
+            </div>-->
+            <video autoplay loop id="videoPlayer" controls="controls" muted="muted" onclick="this.play()">
+                <source src="./images/honey.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="text">
+                <div class="header">
+                    <h2>OUR PRODUCTS</h2>
+                </div>
+                <p>There is an increasing demand for organic products, especially by a new generation in urban areas. People are becoming increasingly aware of the harmful effects of chemically treated food. By offering our products on your shelves, you’re meeting this demand attracting new customers to your business.</p>
+                <p>Our honey has been tested to ensure that it is free from pesticides and environmental pollutants. Honey is a healthy choice as it is a rich source of antioxidants, which lowers the risks of high blood pressure and eradicates colds and coughs. Honey also helps improve cholesterol and lowers triglycerides.</p>
+                <a href="pages/products.html" class="button">More Information</a>
+            </div>
+        </div>
+    </section>
+    <!--Section 5: Executive Team-->
+    <!--The paragraph of this section contains the names of the board of directors of Bhu Amrit-->
+    <!--The previous design had the phone numbers of the members, which they requested by removed-->
+    <section class = "executive">
+        <div class="header">
+            <h2>EXECUTIVE TEAM</h2>
+        </div>
+        <div class="container">
+            <div class="text">
+                <p>The Board of Directors of Bhuamrit Farmer Producer Company comprises a dedicated team of individuals committed to driving the company’s mission of empowering farmers and promoting sustainable agricultural practices. Our executive team plays a vital role in shaping strategic decisions, ensuring operational efficiency, and representing the interests of our farming community. The board includes <b>Ravikiran Saini</b>, <b>Narendara Kumar</b>, <b>Dharmveer Singh</b>, <b>Rajesh Kumar</b>, <b>Gurvindar Singh</b>, <b>Rajpal Singh</b>, and <b>Manju Singh</b>. They each bring unique expertise and deep-rooted knowledge of local agricultural needs. Their leadership and vision are fundamental to the continued success and growth of Bhuamrit.</p>
+            </div>
+            <img src="./images/logotriangle.png" alt="Bhu Amtit">
+        </div>
+        <!--<div class="container">
+            <div class="names">
+                <div class="person">
+                    <p>Ravikiran Saini</p>
+                    <p>Phone Number:</p>
+                </div>
+                <div class="person">
+                    <p>Narendara Kumar</p>
+                    <p>Phone Number:</p>
+                </div>
+                <div class="person">
+                    <p>Dharmveer Singh</p>
+                    <p>Phone Number:</p>
+                </div>
+                <div class="person">
+                    <p>Rajesh Kumar</p>
+                    <p>Phone Number:</p>
+                </div>
+            </div>
+            <img src="./images/logotriangle.png" alt="Bhu Amtit">
+            <div class="names">
+                <div class="person">
+                    <p>Gurvindar Singh</p>
+                    <p>Phone Number:</p>
+                </div>
+                <div class="person">
+                    <p>Rajpal Singh</p>
+                    <p>Phone Number:</p>
+                </div>
+                <div class="person">
+                    <p>Manju Singh</p>
+                    <p>Phone Number:</p>
+                </div>
+            </div>
+        </div>-->
+    </section>
+    <!--The final section is the footer, which also includes the contact and address of the company and links to their storefronts-->
+    <!--Please note that this additional text is not displayed in the mobile version of this website for simplicity-->
+    <section class = "footer">
+        <div class="container">
+            <div class="brand">
+                <img src="./images/logo.png" alt="Company logo">
+                <h3>
+                    <a href="index.html">BhuAmrit</a>
+                </h3>
+            </div>
+            <div class="text">
+                <div class="item">
+                    <p>Contact Us</p>
+                    <p>+91-750-025-2524</p>
+                    <p>info@bhuamrit.com</p>
+                </div>
+                <div class="item">
+                    <p>Registered Address</p>
+                    <p>H. No-74, Village-Khubanpur, Bhagwanpur, Haridwar, Uttarakhand – 247661</p>
+                </div>
+                <div class="item">
+                    <p>Buy Now</p>
+                    <a href="https://www.indiamart.com/bhuamritfarmerproducer/profile.html?srsltid=AfmBOopVCioln0PLx5ZASbkiWINKkpZ4G2e3SZ4SYUk1nl25FVmuEoVr" target="_blank" rel="noopener noreferrer">India Mart</a>
+                    <a href="https://www.amazon.in/l/27943762031?me=A1MRTPE3V1H2IM&ref_=ssf_share&fbclid=PAQ0xDSwLEhQVleHRuA2FlbQIxMQABp2uxkjHEh4NXYs-8QkeCNHBtYZefCAp3XJIXtchrktMXkDEFMJhzHUFZZNN9_aem_h5ZHc38W9imUHsZ1qYaqJQ" target="_blank" rel="noopener noreferrer">Amazon</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
